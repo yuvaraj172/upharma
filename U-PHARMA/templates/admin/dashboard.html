@@ -1,0 +1,81 @@
+{% extends "/admin/base.html" %}
+{% block title %}Dashboard{% endblock %}
+
+{% block content  %}
+<div class="container">
+    <!-- Added your content -->
+    <h1 class="text-center" style="text-decoration: underline">Dashboard</h1>
+
+    <h3 class="text-center">stock</h3>
+    {% if items|length > 0 %}
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Medicine</th>
+            <th scope="col">Stocks</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in items %}
+        <tr>
+            <th scope="row">{{item.id}}</th>
+            <td>{{item.name}}</td>
+            <td>{{item.stocks}}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <h5 class="text-center">No products</h5>
+    {% endif %}
+
+    <h3 class="text-center">Product Request</h3>
+
+    {% if requests|length > 0 %}
+<table class="table table-striped">
+    <thead>
+    <tr>
+       
+        <th scope="col">NAME</th>
+        <th scope="col">Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for request in requests %}
+    <tr>
+       
+        <td>{{request.name}}</td>
+        <td>{{request.date_request}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<h5 class="text-center">No appointement</h5>
+{% endif %}
+
+</div>
+
+
+
+
+<h1>PROMO</h1>
+<a href="/promo">coming up proms</a>
+
+<h1>PAYMENT SUMMARY</h1>
+
+<p><a href="https://dashboard.razorpay.com/app/dashboard">ALL PAYMENTS</a></p>
+
+
+<h1>CHAT BOX</h1>
+
+<p><a href="https://dashboard.tawk.to/?lang=en#/dashboard/6201192bb9e4e21181bdd877">CHAT BOX</a></p>
+
+{% endblock %}
+
+{% block javascript %}
+<script type="text/javascript">
+    <!-- Added your Javascript code -->
+</script>
+{% endblock %}

@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+
+{% block content  %}
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/static/images/image6.jpg" class="d-block w-100" height="500" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>ALWAYS KEEP US YOUR FIRST CHOISE U-PHARMA</h5>
+        
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="/static/images/image5.jpg" class="d-block w-100" height="500" alt="...">
+      <div class="carousel-caption d-none d-md-block" >
+       <h5>BE HEALTHY</h5>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="/static/images/image4.jpg" class="d-block w-100" height="500" alt="...">
+      <div class="carousel-caption d-none d-md-block" >
+        <h5>STAY HAPPY</h5>
+       </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+
+  <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-body">
+      <p>CHECK OUT THE NEWS IN OTHER SERVICES</p>
+      <div class="mt-2 pt-2 border-bottom">
+        <button type="button" class="btn btn-primary btn-sm">Take action</button>
+        <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="toast">Close</button>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+
+
+<main class="container">
+<div class="row text-center   my-5 fw-bold">
+   <a href="/dev" class="btn btn-outline-success"><b><u>OTHER SERVICES</u></b></TEAM></a>
+</div>
+</main>
+
+
+
+
+<footer>
+  <center>  
+        <a href=
+           "http://127.0.0.1:8000/about">About Us</a>|
+           <a href=
+              "http://127.0.0.1:8000/contact">Contact</a>
+             
+
+
+       <p>@U-PHARMA, Some rights reserved</p>
+
+ </center>
+</footer>
+
+
+
+{% endblock %}
+
+{% block javascript %}
+<script type="text/javascript">
+    <!-- Added your Javascript code -->
+    let myCarousel = document.querySelector('#carouselExampleIndicators')
+    let carousel = new bootstrap.Carousel(myCarousel, {
+      interval: 2000,
+      wrap: false
+    })
+</script>
+{% endblock %}

@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block title %}Title{% endblock %}
+
+{% block content  %}
+    <!-- Added your content -->
+  
+<div class="container">
+  
+     <form class="my-3 mt-5" method="POST" action="/register">
+
+          <div class="row">
+                <div class="col-md-4"></div>
+
+                <div class="col-md-4">
+<b>
+                  
+                            <h5 class="card-title text-center">Register</h5>
+                            <p class="card-text text-center">Please Enter your account details.</p>
+
+                            <label for="username" class="form-label">Enter Your Username:</label>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="spusername">@</span>
+                                <input type="text" id="username" name="username" class="form-control" placeholder="Username"
+                                    aria-label="Username" aria-describedby="spusername" required>
+                            </div>
+
+                            <label for="password" class="form-label">Enter Your Password:</label>
+
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="sppassword">@</span>
+                                <input type="password" id="password" name="password" class="form-control" placeholder="Password"
+                                    aria-label="Password" aria-describedby="sppassword" minlength="6" required>
+                            </div>
+
+                            <label for="email" class="form-label">Enter Your EMail:</label>
+
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="spemail">@</span>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="Email"
+                                    aria-label="Email" aria-describedby="spemail" required>
+                            </div>
+
+                            <label for="address" class="form-label">Enter Your Address:</label>
+
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="spaddress">@</span>
+                                <input type="text" id="address" name="address" class="form-control" placeholder="address"
+                                    aria-label="address" aria-describedby="address"  required>
+                            </div>
+
+                            <label for="phone" class="form-label">Enter Your Phone:</label>
+
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="spphone">@</span>
+                                <input type="tel" id="phone" name="phone" class="form-control" placeholder="phone"
+                                    aria-label="Phone" aria-describedby="spphone" maxlength="10" pattern="[0-9]{10}" required>
+                            </div>
+
+                            <button class="btn btn-success" type="submit">SUBMIT</button>
+                            <button class="btn btn-danger" type="reset">CLEAR</button>
+                            <h5 class="text-center my-3"><a href="/login" class="link-secondary">Already account created. Login!!</a> </h5>
+
+                        </div>
+                    </div>
+
+                </div>
+            </b>                
+
+     </form>
+                   
+<style>
+    body {
+        background-image: url('/static/images/i3.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+</style>
+
+</div>
+{% endblock %}
+
+{% block javascript %}
+<script type="text/javascript">
+    <!-- Added your Javascript code -->
+</script>
+{% endblock %}

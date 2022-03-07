@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}Details{% endblock %}
+
+{% block content  %}
+    <!-- Added your content -->
+<div class="container">
+<h5 class="text-center my-5">{{ description.name }}</h5>
+
+<div class="row my-2">
+    <div class="col-md-6">
+        <img src="{{description.image}}" height="400">
+    </div>
+    <div class="col-md-6">
+        <h5>{{description.name}}</h5>
+        <h3> ₹. {{description.price}} </h3>
+        <p>tags: {{description.tags}}</p>
+        <p>Category: {{description.category}}</p>
+        <p>{{description.details}}</p>
+        <form action="/addtocart" method="get">
+            <input name="pid" value="{{description.id}}" hidden>
+            <label for="qty">Select Quantity:</label>
+            <select id="qty" class="form-select my-3" name="qty" aria-label="Default select example">
+              <option value="1" selected>1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+            </select>
+
+
+            <button class="btn btn-success" type="submit">Add To Cart</button>
+            
+        </form>
+
+      <form>
+          <div>  
+             <a href="/prescription" class="btn btn-success">IF YOU WANT MORE THAN 8 SHEET</a>
+          </div>  
+    </form>  
+        <!--<a href="addToCart/{{description.id}}" class="btn btn-success">Add To Cart</a>-->
+    </div>
+</div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+<script type="text/javascript">
+    <!-- Added your Javascript code -->
+</script>
+{% endblock %}

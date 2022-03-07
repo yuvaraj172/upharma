@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}Contact{% endblock %}
+
+{% block content  %}
+<div class="container">
+    <!-- Added your content -->
+    <h5>Request Page</h5>
+
+    <h4>Your Requirments</h4>
+    
+    <form action="/appointment" method="post">
+    
+        <label for="pname" class="form-label">Enter Name :</label>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="pname">@</span>
+            <input type="text" id="pname" name="pname" class="form-control" placeholder="Product name"
+                aria-label="pname" aria-describedby="basic-addon1" required>
+        </div>
+    
+        <label for="date_request" class="form-label">Date Request:</label>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="date_request">@</span>
+            <input type="datetime-local" id="date_request" name="date_request" class="form-control" placeholder="Select a date"
+                aria-label="date_request" aria-describedby="basic-addon1" required>
+        </div>
+
+        <button type="submit" class="btn btn-success">CONFIRM ORDER</button>
+
+    </form>    
+
+</div>
+{% endblock %}
+
+{% block javascript %}
+<script type="text/javascript">
+    <!-- Added your Javascript code -->
+</script>
+{% endblock %}
